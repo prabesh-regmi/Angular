@@ -1,0 +1,24 @@
+<div class="message-box">
+  <div class="inner-content"><b>Message Setting</b></div>
+  <nz-table #basicTable nzSize="small" [nzData]="messageData" [nzPageSize]="15" [nzShowPagination]="messageData.length<=15? false : true">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Types</th>
+          <th>Message</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of basicTable.data, let i = index">
+          <td>{{ i+1 }}</td>
+          <td>{{ data.type }}</td>
+          <td>{{ data.message }}</td>
+          <td>
+              <a><i nz-icon nzType="edit" nzTheme="outline"></i></a>
+          </td>
+        </tr>
+      </tbody>
+    </nz-table>
+  
+</div>

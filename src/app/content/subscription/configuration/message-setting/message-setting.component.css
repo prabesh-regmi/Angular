@@ -1,0 +1,16 @@
+.message-box{
+  margin-top: 10px;
+}
+nz-table {
+    border: 1px solid #000;
+    margin-top: 14px;
+  }
+  
+  td{
+      border:1px solid black;
+      border-left: none;
+      border-right: none;
+  }
+  a{
+    color: inherit;
+  }

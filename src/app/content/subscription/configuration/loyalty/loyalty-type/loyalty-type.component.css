@@ -1,0 +1,33 @@
+nz-table {
+    border: 1px solid #000000;
+  }
+  
+  td{
+      border:1px solid black;
+      border-left: none;
+      border-right: none;
+  }
+  .loyalty-type{
+    margin-left: 10px;
+}
+  .loyalty-head{
+    display: flex;
+    justify-content:space-between;
+}
+.button {
+    background-color: #000000; /* black */
+    color: white;
+    cursor: pointer;
+    border-radius:3px;
+  }
+  .color-fill{
+    width: 40px;
+    height: 10px;
+  }
+  a{
+    color: inherit;
+  }
+  nz-select {
+    margin-right: 8px;
+    width: 120px;
+  }

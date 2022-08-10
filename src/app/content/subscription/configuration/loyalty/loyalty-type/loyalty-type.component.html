@@ -1,0 +1,46 @@
+<div class='loyalty-type'>
+<div class='loyalty-head'>
+    <p><b>Loyalty Type</b></p>
+    <!-- <button class='button'>Add New</button>  -->
+    <button class="button" nz-button nzType="primary" nzSize="small" (click)="showModal()"><span>Add New</span></button>
+  </div>
+  <nz-table #basicTable nzSize="small" [nzData]="loyaltyTypeData" [nzPageSize]="5" [nzShowPagination]="loyaltyTypeData.length<=5? false : true">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Customer</th>
+        <th>Color</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of basicTable.data, let i = index">
+        <td>{{ i+1 }}</td>
+        <td>{{ data.customer }}</td>
+        <td><div class="color-fill" [style.backgroundColor]="data.color" ></div></td>
+        <td>
+          <a (click)="deleteUser(i)"><i nz-icon nzType="delete" nzTheme="outline"></i></a>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>
+</div>
+
+<nz-modal [(nzVisible)]="isVisible" [nzTitle]="modalTitle" [nzContent]="modalContent" [nzFooter]="modalFooter"
+  (nzOnCancel)="handleCancel()">
+  <ng-template #modalTitle>Select Image</ng-template>
+
+  <ng-template  #modalContent>
+    <nz-select [(ngModel)]="selectedCustomer" (ngModelChange)="provinceChange($event)">
+      <nz-option *ngFor="let p of provinceData" [nzValue]="p" [nzLabel]="p"></nz-option>
+    </nz-select>
+    <nz-select [(ngModel)]="selectedColor">
+      <nz-option *ngFor="let c of cityData[selectedCustomer]" [nzValue]="c" [nzLabel]="c"></nz-option>
+    </nz-select>
+  </ng-template>
+
+  <ng-template #modalFooter>
+    <button nz-button nzType="default" (click)="handleCancel()">Back</button>
+    <button nz-button nzType="primary" (click)="handleOk()" [nzLoading]="isConfirmLoading">Add</button>
+  </ng-template>
+</nz-modal>

@@ -1,0 +1,51 @@
+.loyalty-head{
+  display: flex;
+  justify-content:space-between;
+}
+.button {
+  background-color: #000000; /* black */
+  color: white;
+  cursor: pointer;
+  border-radius:3px;
+}
+.loyalty-type{
+  padding: 20px 0px 10px 10px;
+
+}
+nz-card{
+border: 1px solid black;
+}
+.loyalty-box{
+  width :100%;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+nz-card{
+margin-bottom: 20px;
+
+}
+a{
+color: inherit;
+}
+:host ::ng-deep .image-uploader > .ant-upload {
+width: 128px;
+height: 128px;
+}
+input[type="file"] {
+display: none;
+}
+.custom-file-upload {
+border: 1px solid #ccc;
+display: block;
+margin-left: auto;
+margin-right: auto;  padding: 6px 12px;
+align-items: center;
+cursor: pointer;
+height: 100px;
+width: 120px;
+}
+.upload-image{
+height: 100%;
+width: 100%;
+}

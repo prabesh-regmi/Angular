@@ -1,0 +1,28 @@
+<nz-layout>
+  <nz-sider nzTheme="light" nzCollapsible nzWidth="200px">
+    <img class="logo" src="../../assets/logo.jpg" alt="image">
+    <ul nz-menu class="sidebar-menu" nzMode="inline">
+
+      <li *ngFor="let dataItem of sidebarData" nz-submenu nzTitle="{{dataItem.title}}" nzIcon="{{dataItem.icon}}">
+        <ul *ngFor="let item of dataItem.subMenu">
+
+          <li nz-menu-item><a routerLink="{{item.path}}">{{item.subTitle}}</a></li>
+
+        </ul>
+      </li>
+
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header>
+      <app-navbar></app-navbar>
+    </nz-header>
+    <nz-content style="background-color:#FFFFFF;margin:0px;padding: 0px;">
+      <div class="router-content">
+        <router-outlet></router-outlet>
+      </div>
+
+
+    </nz-content>
+  </nz-layout>
+</nz-layout>
