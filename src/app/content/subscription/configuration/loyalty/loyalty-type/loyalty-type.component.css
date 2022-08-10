@@ -31,3 +31,47 @@ nz-table {
     margin-right: 8px;
     width: 120px;
   }
+
+    nz-select {
+    border: 0px solid #719ECE;
+    width: 60%;
+
+  }
+  select {
+    border: 0px solid #719ECE;
+    width: 80%;
+    -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+  cursor: pointer;
+
+  }
+  nz-select::-ms-expand {
+    display: none;
+}
+      select:focus { 
+        outline: none !important;
+        border-color: #719ECE;
+        box-shadow: 0 0 10px #719ECE;
+      }
+      .save {
+        margin-right: 15px;
+      }
+      option:hover{
+        background-color: none;
+      }
+      textarea{
+        width: 100%;
+        border: 1px solid #719ECE;
+        background-color: #fff;
+        resize: none;
+        overflow:hidden;
+        height: 30px;
+    
+      }
+          textarea:focus { 
+            outline: none !important;
+            border-color: #719ECE;
+            box-shadow: 0 0 10px #719ECE;
+          }

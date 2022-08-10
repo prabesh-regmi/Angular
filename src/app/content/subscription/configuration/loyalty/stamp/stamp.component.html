@@ -2,12 +2,12 @@
   <div class='loyalty-head'>
     <p><b>Stamp</b></p>
     <!-- <button class='button'>Add New</button>  -->
-    <button class="button" nz-button nzType="primary" nzSize="small" (click)="showModal()"><span>Add New</span></button>
+    <button class="button" nz-button nzType="primary" nzSize="small"><span>Edit</span></button>
   </div>
   <nz-card *ngFor="let item of imgList; index as i">
     <div class="loyalty-box">
       <img [src]="item.imageSrc" alt="can not load" height="80px">
-      <a><i (click)="removeHandler(i)" nz-icon nzType="delete" nzTheme="outline"></i></a>
+      <a><i nz-icon nzType="edit" nzTheme="fill"></i></a>
     </div>
   </nz-card>
 </div>

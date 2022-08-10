@@ -4,13 +4,32 @@
 nz-table {
     border: 1px solid #000;
     margin-top: 14px;
+    
   }
   
-  td{
+  nz-table td{
       border:1px solid black;
       border-left: none;
       border-right: none;
+      height: 50px;
   }
   a{
     color: inherit;
   }
+  .save {
+    margin-right: 20px;
+  }
+  textarea, select {
+    width: 100%;
+    border: 1px solid #719ECE;
+    background-color: #fff;
+    resize: none;
+    overflow:hidden;
+    height: 80px;
+
+  }
+      textarea:focus { 
+        outline: none !important;
+        border-color: #719ECE;
+        box-shadow: 0 0 10px #719ECE;
+      }
