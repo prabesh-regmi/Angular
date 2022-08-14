@@ -40,6 +40,8 @@ import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzUploadModule } from 'ng-zorro-antd/upload';
 import { NzSelectModule } from 'ng-zorro-antd/select';
+import { NzImageModule } from 'ng-zorro-antd/image';
+
 
 
 
@@ -115,7 +117,8 @@ const appRoutes: Routes =[
     NzCardModule,
     NzModalModule,
     NzUploadModule,
-    NzSelectModule
+    NzSelectModule,
+    NzImageModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

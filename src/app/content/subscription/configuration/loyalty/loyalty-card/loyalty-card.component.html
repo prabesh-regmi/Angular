@@ -4,14 +4,54 @@
     <!-- <button class='button'>Add New</button>  -->
     <button class="button" nz-button nzType="primary" nzSize="small"><span>Edit</span></button>
   </div>
-  <nz-card *ngFor="let item of imgList; index as i">
-    <div class="loyalty-box">
-      <img [src]="item.imageSrc" alt="can not load" height="80px">
-      <a><i nz-icon nzType="edit" nzTheme="fill"></i></a>
-    </div>
+
+
+ <div class="loyalty-box">
+      <!--For Loyalty Card -->
+
+    <nz-card >
+      <div class="container" onmouseleave="this.lastElementChild.style.display='none'" onmouseenter="this.lastElementChild.style.display='flex'">
+        <img [src]="loyaltyCardSrc" alt="can not load" height="70px">
+        <div class="btn-group">
+          <label  style="padding-top: 6px;" class="btn">
+            <input type=file [(ngModel)]="loyaltyCardSrc"  accept=".jpg, .jpeg, .png" name="files[]" size=30>Edit
+        </label><button class="btn" style="margin-left: 4px;" nz-button nzType="primary" (click)="showImage(loyaltyCardSrc)" >View</button> 
+        </div>
+      </div>
+    </nz-card>
+
+        <!--For Stamp -->
+
+    <nz-card >
+      <div class="container" onmouseleave="this.lastElementChild.style.display='none'" onmouseenter="this.lastElementChild.style.display='flex'">
+        <img [src]="stampSrc" alt="can not load" height="70px">
+        <div class="btn-group">
+          <label  style="padding-top: 6px;" class="btn">
+            <input   type=file  accept=".jpg, .jpeg, .png" [(ngModel)]="stampSrc" name="files[]" size=30>Edit
+        </label>
+        <button class="btn" style="margin-left: 4px;" nz-button nzType="primary" (click)="showImage(stampSrc)" >View</button> 
+        </div>
+      </div>
   </nz-card>
-</div>
-<nz-modal [(nzVisible)]="isVisible" [nzTitle]="modalTitle" [nzContent]="modalContent" [nzFooter]="modalFooter"
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <nz-modal [(nzVisible)]="isVisible" [nzTitle]="modalTitle" [nzContent]="modalContent" [nzFooter]="modalFooter"
   (nzOnCancel)="handleCancel()">
   <ng-template #modalTitle>Select Image</ng-template>
 
@@ -28,4 +68,4 @@
     <button nz-button nzType="default" (click)="handleCancel()">Back</button>
     <button nz-button nzType="primary" (click)="handleOk()" [nzLoading]="isConfirmLoading">Add</button>
   </ng-template>
-</nz-modal>
+</nz-modal> -->

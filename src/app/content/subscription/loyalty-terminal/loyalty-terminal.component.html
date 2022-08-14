@@ -1,1 +1,14 @@
 <p>loyalty-terminal works!</p>
+
+<!-- <div contenteditable (blur)="save(innerHTML)" [(ngModel)]="demoText" [(innerHTML)]="actualText"></div> -->
+<app-sizer [(size)]="fontSizePx"></app-sizer>
+<div>
+    <button type="button" (click)="dec()" title="smaller">-</button>
+    <button type="button" (click)="inc()" title="bigger">+</button>
+    <span [style.font-size.px]="size">FontSize: {{size}}px</span>
+  </div>
+  <app-sizer [(size)]="fontSizePx"></app-sizer>
+<div [style.font-size.px]="fontSizePx">Resizable Text</div>
+
+
+<app-sizer [size]="fontSizePx" (sizeChange)="fontSizePx=$event"></app-sizer>

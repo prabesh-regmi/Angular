@@ -21,15 +21,19 @@ nz-table {
   }
   textarea, select {
     width: 100%;
-    border: 1px solid #719ECE;
+    border: 0px solid #719ECE;
     background-color: #fff;
     resize: none;
     overflow:hidden;
-    height: 80px;
+    height: inherit;
+    overflow-wrap:break-word;
+    transition: height 0.3s;
 
   }
-      textarea:focus { 
+      textarea:focus, div:focus { 
         outline: none !important;
         border-color: #719ECE;
         box-shadow: 0 0 10px #719ECE;
+        height: 80px;
+
       }

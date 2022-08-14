@@ -66,6 +66,10 @@ export class LoyaltyTypeComponent implements OnInit {
   //   this.loyaltyTypeData = [...this.loyaltyTypeData];
 
   // }
+  check() {
+    
+console.log("worded")
+  }
 
   startEdit(id: string): void {
     this.editColor[id].edit = true;

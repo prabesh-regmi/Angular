@@ -15,33 +15,16 @@
     </thead>
     <tbody>
       <tr *ngFor="let data of editRowTable.data">
-        <ng-container *ngIf="!editColor[data.id].edit; else editTemplate">
+        <ng-container>
         <td>{{ data.id }}</td>
-        <td>{{ data.customer }}</td>
+        <td><textarea (change)="saveEdit(data.id)" type="text" nz-input [(ngModel)]="editColor[data.id].data.customer" ></textarea></td>
         <td>
-          <select disabled [style.backgroundColor]="data.color" >
-          </select>
+          <input (change)="saveEdit(data.id)" [(ngModel)]="editColor[data.id].data.color" type="color">
         </td>
-
         <td>
           <a (click)="startEdit(data.id)"><i nz-icon nzType="edit" nzTheme="fill"></i></a>
         </td>
       </ng-container>
-      <ng-template #editTemplate>
-        <td>{{ data.id }}</td>
-        <td><textarea type="text" nz-input [(ngModel)]="editColor[data.id].data.customer" ></textarea></td>
-        <td>
-          <select [(ngModel)]="editColor[data.id].data.color"  [style.backgroundColor]="data.color" onchange="this.style.backgroundColor=this.value">
-            <option value="gold" [style.backgroundColor]="'gold'" ></option>
-            <option value="silver" [style.backgroundColor]="'silver'"></option>
-            <option value="brown" [style.backgroundColor]="'brown'"></option>
-          </select>
-        </td>
-        <td>
-          <a (click)="saveEdit(data.id)" class="save"><b><i nz-icon nzType="check" nzTheme="outline"></i></b></a>
-          <a (click)="cancelEdit(data.id)" class="save"><b><i nz-icon nzType="close" nzTheme="outline"></i></b></a>
-        </td>
-      </ng-template>
       </tr>
     </tbody>
   </nz-table>

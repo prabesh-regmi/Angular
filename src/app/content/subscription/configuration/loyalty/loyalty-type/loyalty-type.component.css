@@ -63,7 +63,7 @@ nz-table {
       }
       textarea{
         width: 100%;
-        border: 1px solid #719ECE;
+        border: 0px solid #719ECE;
         background-color: #fff;
         resize: none;
         overflow:hidden;
